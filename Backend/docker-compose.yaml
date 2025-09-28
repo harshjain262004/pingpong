@@ -3,7 +3,7 @@ version: "3.9"
 
 services:
   postgres:
-    image: postgres:15
+    image: postgres:18
     container_name: postgres_db
     restart: always
     environment:
@@ -19,9 +19,23 @@ services:
     image: redis:7
     container_name: redis_cache
     restart: always
-    command: ["redis-server", "--requirepass", "redispass"]
     ports:
       - "6379:6379"
 
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
 volumes:
   postgres_data:
+  pgadmin_data:

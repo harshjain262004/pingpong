@@ -1,0 +1,6 @@
+############### TODO: Convert this file to readme.md before squash commiting to main ###############
+
+1. env variables start with respective domains
+    eg. Backend = BE_DB_NAME, BE_DB_PASS, etc
+        Frontend = FE_SOME_PORT, FE_SECRET, etc
+2. 
