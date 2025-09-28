@@ -1,3 +1,5 @@
-module github.com/harshjain262004/pingpong
+module github.com/harshjain262004/pingpong/Backend
 
 go 1.24.2
+
+require github.com/caarlos0/env/v11 v11.3.1

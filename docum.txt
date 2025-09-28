@@ -1,6 +1,10 @@
 ############### TODO: Convert this file to readme.md before squash commiting to main ###############
 
+Common rules and guidelines
 1. env variables start with respective domains
     eg. Backend = BE_DB_NAME, BE_DB_PASS, etc
         Frontend = FE_SOME_PORT, FE_SECRET, etc
-2. 
+
+--> Backend
+    1. Webserver
+    2. Consumer
