@@ -3,13 +3,13 @@ package utils
 import "github.com/caarlos0/env/v11"
 
 type database struct {
-	DbString string `env:"BK_DB_STRING" envDefault:"postgres://postgres:postgres@localhost:5432/pingpong"`
+	DbString  string `env:"BK_DB_STRING" envDefault:"postgres://postgres:postgres@localhost:5432/pingpong"`
 	DbMaxIdle int    `env:"BK_DB_MAX_IDLE" envDefault:"10"`
 	DbMaxOpen int    `env:"BK_DB_MAX_OPEN" envDefault:"100"`
 }
 
 type config struct {
-	Dgn string `env:"BK_DGN" envDefault:"local"`
+	Dgn            string `env:"BK_DGN" envDefault:"local"`
 	ServerIdentity string `env:"BK_SERVER_IDENTITY" envDefault:"webserver"`
 	Database       database
 }
