@@ -8,3 +8,31 @@ Common rules and guidelines
 --> Backend
     1. Webserver
     2. Consumer
+
+Tables to be made and assignee
+BaseModel
+    CreatedAt
+    UpdatedAt
+    DeletedAt
+    Id (uuid v7)
+
+DB definition
+
+User
+    Name (string)
+
+Subscription
+    User_id
+    Url (string)
+	
+Event
+    Subscription_id 
+    Payload (json)
+    Retries (should be -1 and not > 5) (int)
+    ResponseCode (should be -1, initially) (int)
+    ResponseData (json)
+
+Logs
+    Event_id
+    ResponseCode (int)
+    ResponseData (json)
