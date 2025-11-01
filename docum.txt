@@ -1,0 +1,38 @@
+############### TODO: Convert this file to readme.md before squash commiting to main ###############
+
+Common rules and guidelines
+1. env variables start with respective domains
+    eg. Backend = BE_DB_NAME, BE_DB_PASS, etc
+        Frontend = FE_SOME_PORT, FE_SECRET, etc
+
+--> Backend
+    1. Webserver
+    2. Consumer
+
+Tables to be made and assignee
+BaseModel
+    CreatedAt
+    UpdatedAt
+    DeletedAt
+    Id (uuid v7)
+
+DB definition
+
+User
+    Name (string)
+
+Subscription
+    User_id
+    Url (string)
+	
+Event
+    Subscription_id 
+    Payload (json)
+    Retries (should be -1 and not > 5) (int)
+    ResponseCode (should be -1, initially) (int)
+    ResponseData (json)
+
+Logs
+    Event_id
+    ResponseCode (int)
+    ResponseData (json)
